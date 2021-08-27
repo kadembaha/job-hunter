@@ -126,6 +126,7 @@ header{
 .top img {
     width: 50px;
     height: 50px;
+    border-radius: 10px;
 }
 .rolename{
     padding: 20px 0px;
@@ -138,6 +139,7 @@ header{
     overflow: hidden;
     font-size: 18px;
     color: #96939B;
+    flex-grow: 1;
 }
 .buttons {
     color: black;
@@ -155,9 +157,28 @@ header{
     color: #96939B;
     background-color: #2E2E39;
     font-size: 14px;
+    transition: all 0.2s ease;
+}
+.button:hover{
+    background-color: #51515e;
+    color: white;
 }
 .apply-now{
     color: white;
     background-color: #3060FF;
     margin-right: 15px;
 }
+.apply-now:hover{
+    background-color: #5279fa;
+}
+
+@media screen and (max-width: 930px) {
+    .jobs-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .jobs-container {
+        grid-template-columns: repeat(1, 1fr)
+    }
